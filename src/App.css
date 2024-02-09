@@ -1,0 +1,1648 @@
+.App {
+  text-align: center;
+  background-color: #710000;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@font-face {
+  font-family: Mitr;
+  src: url(./img/KANIT-MEDIUM.TTF);
+}
+
+.font {
+  font-family: Mitr;
+}
+
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.BGLoading {
+  color: #FFFFFF;
+  cursor: pointer;
+  margin: auto;
+}
+
+.GitLoading {
+  width: 30%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.SiteStart {
+  width: 25%;
+  height: 100%;
+  margin: auto;
+}
+
+.BGStart {
+  background-image: url('./img/BGStart.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/*---------------------------------------*/
+.ErrorModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.ErrorModal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 23%;
+  height: 230px;
+  object-fit: contain;
+  background-image: url('./img/popupError.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 20px 0;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  scale: 90%;
+}
+
+.ErrorModal-content h2 {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  margin: 0;
+}
+
+.ErrorModal-content p {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: left;
+  margin-left: 10px;
+  overflow: auto;
+  font-size: 18px;
+}
+
+.ErrorModal-content button {
+  align-self: stretch;
+  margin-top: auto;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.ErrorModal-content button:hover {
+  opacity: 0.8;
+}
+
+/*---------------------------------------*/
+
+.BGCondition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #711a1abd;
+  width: 100%;
+  max-width: 350px;
+  height: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  margin-bottom: 10%;
+}
+
+.spantext {
+  width: 100%;
+  margin-top: 20px;
+  color: #e1b12c;
+  text-align: center;
+  padding: 30px 0;
+  box-sizing: border-box;
+  align-self: stretch;
+  margin-top: auto;
+  font-size: 20px;
+}
+
+.custom-checkbox-container {
+  width: 100%;
+  align-self: stretch;
+  color: #e1b12c;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-self: center;
+}
+
+.custom-checkbox-container input[type="checkbox"]:checked+.checkmarkI {
+  background: #e1b12c;
+}
+
+.custom-checkbox-container input[type="checkbox"]:checked+.checkmarkI::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 8px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.confirm-button {
+  width: 80%;
+  background-color: #e1b12c;
+  border: 50px solid rgb(255, 255, 255);
+  color: rgb(89, 0, 0);
+  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.confirm-button:hover {
+  opacity: 0.8;
+}
+
+/*---------------------------------------*/
+.buttonplay {
+  position: relative;
+  width: 70%;
+  height: 100px;
+  color: #8e1b1380;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.5);
+  scale: 80%;
+  overflow: hidden;
+}
+
+.button-content {
+  background-image: url('./img/buntom.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(88, 0, 0);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.button-contentNot {
+  background-color: #000000;
+  background-image: url('./img/buntom.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(88, 0, 0);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.button-contentNot div {
+  background-color: #000000;
+}
+/*---------------------------------------*/
+.BGGit {
+  width: 100%;
+  height: 100%;
+  background-color: #61dafb;
+}
+
+.BGPopup {
+  position: relative;
+  width: 60%;
+  height: 50%;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+
+.Git {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.BGcenter {
+  margin-top: 0%;
+
+}
+
+.GitLight {
+  position: absolute;
+  width: 35%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.GitPopup + h3 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(255, 200, 0);
+  font-size: 24px;
+  margin-top: 25%; /* ปรับตำแหน่งตามต้องการ */
+}
+
+.GitPopup + h2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(255, 200, 0);
+  font-size: 24px;
+  margin-top: 25%; /* ปรับตำแหน่งตามต้องการ */
+}
+
+.rotate {
+  animation: rotateAnimation 2s infinite linear;
+}
+
+.BGpopupText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.buttonscal {
+  width: 100%;
+  height: 100%;
+}
+
+.buttonPopup {
+  position: absolute;
+  background-image: url('./img/buttompopup.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 25%;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  margin-bottom: 12%;
+  scale: 40%;
+}
+
+.button-contentPopup {
+  color: #ffc400;
+  font-size: 35px;
+}
+
+
+.popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.popup-background {
+  background-image: url('./img/popup.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 25%; 
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: popupAnimation 0.5s ease forwards;
+}
+
+.popup-content {
+  position: absolute;
+  top: 15%;
+  text-align: center;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 65%;
+}
+
+.text-content{
+  width: 80%;
+}
+
+.popup-content h2,
+.popup-content h1 {
+  align-self: center;
+  margin: 0;
+}
+
+
+.popup-content h1 {
+  margin-bottom: 15%; 
+}
+
+.popup-content h2 {
+  margin-top: 25px;
+}
+
+.popup-content p {
+  align-self: center;
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.input-area {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+
+.input-area div {
+  background-image: url('./img/buttompopup.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 40%; 
+  padding: 10px;
+  margin-top: 0px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(150deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes popupAnimation {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .SiteStart {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+  }
+  .BGLoading {
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  .GitLoading {
+    width: 30%;
+  }
+  
+  /*---------------------------------------*/
+  .ErrorModal {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .ErrorModal-content {
+    width: 23%;
+    height: 230px;
+    padding: 20px;
+    border-radius: 10px;
+    scale: 90%;
+  }
+  
+  .ErrorModal-content h2 {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    margin: 0;
+  }
+  
+  .ErrorModal-content p {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+    margin-left: 10px;
+    overflow: auto;
+    font-size: 18px;
+  }
+  
+  .ErrorModal-content button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+  
+  .ErrorModal-content button:hover {
+    opacity: 0.8;
+  }
+  
+  /*---------------------------------------*/
+  
+  .BGCondition {
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    height: 50%;
+    margin-bottom: 10%;
+  }
+  
+  .spantext {
+    width: 100%;
+    margin-top: 20px;
+    padding: 30px 0;
+    font-size: 20px;
+  }
+  
+  .custom-checkbox-container {
+    width: 100%;
+    margin-bottom: 20px;
+   
+  }
+
+  .custom-checkbox-container input[type="checkbox"]:checked+.checkmarkI::after {
+ 
+    left: 9px;
+    top: 5px;
+    width: 8px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+  }
+  .confirm-button {
+    width: 80%;
+    border: 50px solid rgb(255, 255, 255);
+    padding: 5px 20px;
+    border-radius: 30px;
+    font-size: 25px;
+  }
+  
+  .confirm-button:hover {
+    opacity: 0.8;
+  }
+  
+  /*---------------------------------------*/
+  .buttonplay {
+    width: 70%;
+    height: 100px;
+    padding: 5px 20px;
+    border-radius: 50px;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.5);
+    scale: 80%;
+  }
+  
+  .button-content {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+  }
+  
+  
+  .button-contentNot {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+  }
+  
+  /*---------------------------------------*/
+  .BGPopup {
+    width: 60%;
+    height: 50%;
+  }
+  
+  .Git {
+    width: 85%;
+  }
+  
+  .GitLight {
+    width: 35%;
+  }
+  
+  .GitPopup + h3 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    margin-top: 25%;
+  }
+  
+  .GitPopup + h2 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 200, 0);
+    font-size: 24px;
+    margin-top: 25%;
+  }
+  
+  .buttonscal {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .buttonPopup {
+    width: 100%;
+    height: 25%;
+    border-radius: 25px;
+    margin-bottom: 12%;
+    scale: 40%;
+  }
+  
+  .button-contentPopup {
+    font-size: 35px;
+  }
+  
+  
+  .popup-container {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  .popup-background {
+    width: 40%; 
+    height: 50%;
+  }
+  
+  .popup-content {
+    top: 15%;
+    color: white;
+    width: 100%;
+    height: 65%;
+  }
+  
+  .text-content{
+    width: 80%;
+  }
+  
+  .popup-content h2,
+  .popup-content h1 {
+    margin: 0;
+  }
+  
+  
+  .popup-content h1 {
+    margin-bottom: 15%; 
+  }
+  
+  .popup-content h2 {
+    margin-top: 25px;
+  }
+  
+  .input-area {
+    width: 100%;
+  }
+  
+  .input-area div {
+    width: 40%; 
+    padding: 10px;
+    margin-top: 0px;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+  
+}
+
+@media (max-width: 760px) {
+
+  .SiteStart {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+  }
+
+  .Loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .BGLoading {
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  .GitLoading {
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+  }
+
+  .BGStart {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /*---------------------------------------*/
+  .ErrorModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .ErrorModal-content {
+    width: 100%;
+    height: 202px;
+    scale: 90%;
+  }
+  
+  .ErrorModal-content h2 {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    margin: 0;
+  }
+  
+  .ErrorModal-content p {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+    margin-left: 10px;
+    overflow: auto;
+    font-size: 18px;
+  }
+  
+  .ErrorModal-content button {
+    align-self: stretch;
+    margin-top: auto;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .ErrorModal-content button:hover {
+    opacity: 0.8;
+  }
+  
+  /*---------------------------------------*/
+  
+  .BGCondition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #711a1abd;
+    width: 100%;
+    max-width: 350px;
+    height: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    margin-bottom: 10%;
+  }
+  
+  .spantext {
+    width: 100%;
+    margin-top: 20px;
+    color: #e1b12c;
+    text-align: center;
+    padding: 30px 0;
+    box-sizing: border-box;
+    align-self: stretch;
+    margin-top: auto;
+    font-size: 20px;
+  }
+  
+  .custom-checkbox-container {
+    width: 100%;
+    align-self: stretch;
+    color: #e1b12c;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-self: center;
+  }
+  
+  .custom-checkbox-container input[type="checkbox"]:checked+.checkmarkI {
+    background: #e1b12c;
+  }
+  
+  .custom-checkbox-container input[type="checkbox"]:checked+.checkmarkI::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    width: 8px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .confirm-button {
+    width: 80%;
+    background-color: #e1b12c;
+    border: 50px solid rgb(255, 255, 255);
+    color: rgb(89, 0, 0);
+    padding: 5px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  .confirm-button:hover {
+    opacity: 0.8;
+  }
+  
+  /*---------------------------------------*/
+  .buttonplay {
+    position: relative;
+    width: 70%;
+    height: 100px;
+    color: #8e1b1380;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.5);
+    scale: 80%;
+    overflow: hidden;
+  }
+  
+  .button-content {
+    background-image: url('./img/buntom.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(88, 0, 0);
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  
+  .button-contentNot {
+    background-color: #000000;
+    background-image: url('./img/buntom.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(88, 0, 0);
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .button-contentNot div {
+    background-color: #000000;
+  }
+  /*---------------------------------------*/
+  .BGGit {
+    width: 100%;
+    height: 100%;
+    background-color: #61dafb;
+  }
+  
+  .BGPopup {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  .Git {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+  }
+  
+  .GitLight {
+    width: 80%;
+  }
+  
+  .GitPopup + h3 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 200, 0);
+    font-size: 24px;
+    margin-top: 25%; /* ปรับตำแหน่งตามต้องการ */
+  }
+  
+  .GitPopup + h2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 200, 0);
+    font-size: 24px;
+    margin-top: 25%; /* ปรับตำแหน่งตามต้องการ */
+  }
+  
+  .rotate {
+    animation: rotateAnimation 2s infinite linear;
+  }
+  
+  .BGpopupText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .buttonscal {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .buttonPopup {
+    width: 100%;
+    height: 25%;
+    margin-bottom: 12%;
+    scale: 40%;
+  }
+  
+  .button-contentPopup {
+    color: #ffc400;
+    font-size: 35px;
+  }
+  
+  .popup-background {
+    width: 64%; 
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .popup-content {
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 65%;
+  }
+  
+  .text-content{
+    width: 80%;
+  }
+  
+  .popup-content h2,
+  .popup-content h1 {
+    align-self: center;
+    margin: 0;
+  }
+  
+  
+  .popup-content h1 {
+    margin-bottom: 15%; 
+  }
+  
+  .popup-content h2 {
+    margin-top: 25px;
+  }
+  
+  .popup-content p {
+    align-self: center;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .input-area {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+  }
+  
+  .input-area div {
+    background-image: url('./img/buttompopup.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    width: 40%; 
+    padding: 10px;
+    margin-top: 0px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .Loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .BGLoading {
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  .GitLoading {
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+  }
+  
+  .SiteStart {
+    width: 420px;
+    height: 100%;
+    margin: auto;
+  }
+  
+  .BGStart {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /*---------------------------------------*/
+  .ErrorModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .ErrorModal-content {
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    scale: 90%;
+  }
+  
+  .ErrorModal-content h2 {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    margin: 0;
+  }
+  
+  .ErrorModal-content p {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+    margin-left: 10px;
+    overflow: auto;
+    font-size: 18px;
+  }
+  
+  .ErrorModal-content button {
+    align-self: stretch;
+    margin-top: auto;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .ErrorModal-content button:hover {
+    opacity: 0.8;
+  }
+  
+  /*---------------------------------------*/
+  
+  .BGCondition {
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    height: 50%;
+    margin-bottom: 10%;
+  }
+  
+  .spantext {
+    width: 100%;
+    margin-top: 20px;
+    color: #e1b12c;
+    padding: 30px 0;
+    font-size: 20px;
+  }
+  
+  .custom-checkbox-container {
+    width: 100%;
+    align-self: stretch;
+    color: #e1b12c;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-self: center;
+  }
+  
+  .custom-checkbox-container input[type="checkbox"]:checked+.checkmarkI::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    width: 8px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .confirm-button {
+    width: 80%;
+    background-color: #e1b12c;
+    border: 50px solid rgb(255, 255, 255);
+    color: rgb(89, 0, 0);
+    padding: 5px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  .confirm-button:hover {
+    opacity: 0.8;
+  }
+  
+  /*---------------------------------------*/
+  .buttonplay {
+    position: relative;
+    width: 70%;
+    height: 100px;
+    color: #8e1b1380;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.5);
+    scale: 80%;
+    overflow: hidden;
+  }
+  
+  .button-content {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgb(88, 0, 0);
+    font-size: 30px;
+  }
+  
+  .button-contentNot {
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgb(88, 0, 0);
+    font-size: 30px;
+  }
+  
+  .button-contentNot div {
+    background-color: #000000;
+  }
+  /*---------------------------------------*/
+  .BGGit {
+    width: 100%;
+    height: 100%;
+    background-color: #61dafb;
+  }
+  
+  .BGPopup {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  .Git {
+    width: 415px;
+  }
+  
+  .BGcenter {
+    margin-top: 50%;
+  
+  }
+  
+  .GitLight {
+    width: 100%;
+  }
+  
+  .GitPopup + h3 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 200, 0);
+    font-size: 24px;
+    margin-top: 25%; /* ปรับตำแหน่งตามต้องการ */
+  }
+  
+  .GitPopup + h2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 200, 0);
+    font-size: 24px;
+    margin-top: 25%; /* ปรับตำแหน่งตามต้องการ */
+  }
+  
+  .rotate {
+    animation: rotateAnimation 2s infinite linear;
+  }
+  
+  
+  .buttonscal {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .buttonPopup {
+    width: 100%;
+    height: 25%;
+    border-radius: 25px;
+    bottom: 0;
+    margin-bottom: 12%;
+    scale: 40%;
+  }
+  
+  .button-contentPopup {
+    color: #ffc400;
+    font-size: 35px;
+  }
+  
+  
+  .popup-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  .popup-background {
+    width: 100%; 
+    height: 500px;
+  }
+  
+  .popup-content {
+    top: 15%;
+    color: white;
+    width: 100%;
+    height: 65%;
+  }
+  
+  .text-content{
+    width: 80%;
+  }
+  
+  .popup-content h2,
+  .popup-content h1 {
+    align-self: center;
+    margin: 0;
+  }
+  
+  
+  .popup-content h1 {
+    margin-bottom: 15%; 
+  }
+  
+  .popup-content h2 {
+    margin-top: 25px;
+  }
+  
+  .popup-content p {
+    margin: 0;
+  }
+  .input-area {
+    width: 100%;
+  }
+  
+  .input-area div {
+    width: 40%; 
+    padding: 10px;
+    margin-top: 0px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+}
+
+
+@media (max-width: 395px) {
+  .SiteStart {
+    width: 350px;
+    height: 100%;
+    margin: auto;
+  }
+  .BGLoading {
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  .GitLoading {
+    width: 30%;
+  }
+  
+  /*---------------------------------------*/
+  .ErrorModal {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .ErrorModal-content {
+    width: 400px;
+    height: 162px;
+    padding: 20px;
+    border-radius: 10px;
+    scale: 90%;
+  }
+  
+  .ErrorModal-content h2 {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    margin: 0;
+  }
+  
+  .ErrorModal-content p {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+    margin-left: 10px;
+    overflow: auto;
+    font-size: 14px;
+  }
+  
+  .ErrorModal-content button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+  
+  .ErrorModal-content button:hover {
+    opacity: 0.8;
+  }
+  
+  /*---------------------------------------*/
+  
+  .BGCondition {
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    height: 50%;
+    margin-bottom: 10%;
+  }
+  
+  .spantext {
+    width: 100%;
+    margin-top: 20px;
+    padding: 30px 0;
+    font-size: 20px;
+  }
+  
+  .custom-checkbox-container {
+    width: 100%;
+    margin-bottom: 20px;
+   
+  }
+
+  .custom-checkbox-container input[type="checkbox"]:checked+.checkmarkI::after {
+ 
+    left: 9px;
+    top: 5px;
+    width: 8px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+  }
+  .confirm-button {
+    width: 80%;
+    border: 5px solid rgb(255, 218, 117);
+    padding: 5px 20px;
+    border-radius: 30px;
+    font-size: 25px;
+  }
+  
+  .confirm-button:hover {
+    opacity: 0.8;
+  }
+  
+  /*---------------------------------------*/
+  .buttonplay {
+    width: 90%;
+    height: 100px;
+    padding: 5px 20px;
+    border-radius: 50px;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.5);
+    scale: 80%;
+  }
+  
+  .button-content {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+  }
+  
+  
+  .button-contentNot {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+  }
+  
+  /*---------------------------------------*/
+  .BGPopup {
+    width: 60%;
+    height: 50%;
+  }
+  
+  .Git {
+    width: 100%;
+  }
+  
+  .GitLight {
+    width: 35%;
+  }
+  
+  .GitPopup + h3 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    margin-top: 25%;
+  }
+  
+  .GitPopup + h2 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 200, 0);
+    font-size: 24px;
+    margin-top: 25%;
+  }
+  
+  .buttonscal {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .buttonPopup {
+    width: 100%;
+    height: 25%;
+    border-radius: 25px;
+    margin-bottom: 12%;
+    scale: 40%;
+  }
+  
+  .button-contentPopup {
+    font-size: 35px;
+  }
+  
+  
+  .popup-container {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  .popup-background {
+    width: 400px; 
+    height: 60%;
+  }
+  
+  .popup-content {
+    top: 15%;
+    color: white;
+    width: 100%;
+    height: 65%;
+  }
+  
+  .text-content{
+    width: 80%;
+  }
+  
+  .popup-content h2,
+  .popup-content h1 {
+    margin: 0;
+  }
+  
+  
+  .popup-content h1 {
+    margin-bottom: 15%; 
+  }
+  
+  .popup-content h2 {
+    margin-top: 25px;
+  }
+  
+  .input-area {
+    width: 100%;
+  }
+  
+  .input-area div {
+    width: 40%; 
+    padding: 10px;
+    margin-top: 0px;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+}
